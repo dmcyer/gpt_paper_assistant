@@ -1,22 +1,41 @@
- 1. New methodological improvements to RLHF or instruction-following which are specific fine-tuning steps that are taken to make language models better at following user instructions across a range of tasks.
-    - Relevant: papers that discuss specific methods like RLHF, or instruction-tuning datasets, improving these methods, or analyzing them. Usually these papers will explicitly mention RLHF, instruction-following or instruction-tuning.
-    - Not relevant: papers about adaptation to some task. Simply following instructions or inputs are not sufficient.
- 2. Shows new powerful test set contamination or membership inference methods for language models. Test set contamination is the phenomenon where a language model observes a benchmark dataset during pretraining.
-    - Relevant: test statistics that can detect contamination of benchmarks in language models. statistics that can provide guarantees are more interesting. membership inference methods that are general enough to apply to language models are also relevant.
-    - Not relevant: any papers that do not consider language models, or that do not consider test set contamination.
- 3. Shows a significant advance in the performance of diffusion language models.
-    - Relevant: papers that study language models that are also diffusion models. Continuous diffusions are even more relevant, while discrete diffusions are less so.
-    - Not relevant: papers about image diffusions like DALL-E or Stable Diffusion, or papers that do not explicitly mention language models or applications to text.
- 4. Describes new paradigms to evaluating open-ended text generation. Evaluating the outputs of language models is hard, especially in open-ended settings like for chatbots.
-    - Relevant: papers that fundamentally rethink language model evaluation -- especially by accounting for subjectivity or using adversaries.
-    - Not relevant: specific evaluations for specific tasks, identifying new properties or flaws of language models, or simply collecting new data.
- 5. Conducts surveys or provides data into real-world usage and safety properties of language models.
-    - Relevant: papers that create new datasets or surveys on real-world usage of language models.
-    - Not relevant: papers that apply language models to new real-world tasks.
- 6. Studies 'scaling laws' in the context of neural networks. Scaling laws refer to the very clear power-law relationship between the size or computational power used to train a model and the performance of that model.
-    - Relevant: theoretical or conceptual explanation behind scaling laws for language models.
-    - Not relevant: papers that have experiments at different model scales (but do not explicitly fit a scaling law) or papers that mention scaling laws, but the scaling laws are not the central subject of the paper
+1. Research on Automated Theorem Proving  
+   Focuses on techniques and methods for using computer-based tools to automate theorem proving.  
+   - Relevant: Papers discussing neural automated theorem provers, proof search based on reinforcement learning, theorem proving strategies utilizing deep networks, etc. These papers typically mention keywords such as "Automated Theorem Proving" or "automated provers."  
+   - Not Relevant: Papers solely involving theoretical studies of manual formal proofs or proofs not involving automation.  
 
- In suggesting papers to your friend, remember that he enjoys papers on statistical machine learning, and generative modeling in natural language processing.
- Your friend also likes learning about surprising empirical results in language models, as well as clever statistical tricks.
- He does not want to read papers that are about primarily applications of methods to specific domains.
+2. Research on Synthetic Theorem Generation  
+   Involves techniques and methods for synthesizing and generating theorems and their proofs through algorithms or machine learning models.  
+   - Relevant: Papers discussing methods using generative models to generate theorems and corresponding proofs, as well as studies related to extending theorem libraries. These papers typically mention keywords such as "Synthetic Theorem Generation" or "theorem generation."  
+   - Not Relevant: Papers focusing solely on the discovery and proof of theorems in traditional mathematics without involving automation or synthetic generation.  
+
+3. Research on Autoformalization  
+   Focuses on techniques and methods for automatically converting mathematical expressions in natural language into formalized language.  
+   - Relevant: Papers discussing the application of neural machine translation in autoformalization, autoformalization methods based on large language models, and integration into formal proof assistants. These papers often mention keywords such as "Autoformalization" or "automatic formalization."  
+   - Not Relevant: Papers solely involving theoretical studies of formal languages or manual conversion of natural language to formal language.  
+
+4. Research on Proof Refactoring  
+   Involves techniques and methods for optimizing and restructuring existing proof paths to enhance efficiency and readability.  
+   - Relevant: Papers discussing the use of machine learning methods to extract and optimize key information in theorem proofs, as well as techniques for automatically refactoring complex proofs. These papers typically mention keywords such as "Proof Refactoring" or "proof optimization."  
+   - Not Relevant: Papers focusing solely on discovering new proof methods or theorems without addressing the optimization and restructuring of existing proofs.  
+
+5. Research on Premise Selection  
+   Focuses on techniques for selecting relevant premises during the theorem-proving process to improve proof efficiency.  
+   - Relevant: Papers discussing the application of deep learning models to premise selection, premise selection methods based on graph embeddings, and the use of natural language processing techniques in premise selection. These papers often mention keywords such as "Premise Selection" or "premise optimization."  
+   - Not Relevant: Papers addressing other aspects of theorem proving, such as proof generation or formalization, without focusing on optimizing premise selection.  
+
+6. Research on Benchmarks  
+   Involves designing standardized datasets and testing methods for evaluating AI's capabilities in mathematical domains.  
+   - Relevant: Papers discussing datasets for higher-order logic theorem proving, benchmarks generated for mathematics, and standards for evaluating AI models in theorem proving. These papers typically mention keywords such as "Benchmarks" or "standardized evaluation."  
+   - Not Relevant: Papers focused on individual tasks or lacking standardized evaluation methods without providing unified benchmarks.  
+
+7. Research on Human-in-the-Loop  
+   Focuses on techniques for integrating human experts with AI systems to improve mathematical problem-solving.  
+   - Relevant: Papers discussing how human feedback can guide AI in theorem proving, and hybrid approaches combining human intuition with machine learning models. These papers typically mention keywords such as "Human-in-the-Loop" or "human-AI collaboration."  
+   - Not Relevant: Papers relying solely on fully automated systems or entirely manual methods without addressing human-AI collaborative workflows.  
+
+8. Research on Constructing Examples / Counterexamples  
+   Involves techniques and methods for automatically generating specific examples or counterexamples of mathematical theorems to aid in proof and verification.  
+   - Relevant: Papers discussing methods using machine learning models to generate specific instances supporting or refuting theorems, and tools for constructing complex mathematical examples to test the applicability of theorems. These papers often mention keywords such as "Constructing Examples" or "example generation."  
+   - Not Relevant: Papers focusing solely on theoretical derivation or abstract proofs without addressing the construction and application of specific examples.  
+
+When suggesting papers to your friend, keep in mind that he enjoys research on automated theorem proving, synthetic theorem generation, and premise selection, particularly if they involve advanced machine learning techniques like neural networks or reinforcement learning. He also appreciates papers on surprising empirical results in theorem proving systems, as well as clever algorithmic or statistical tricks. However, he is not interested in papers that primarily focus on applications of these methods to specific mathematical domains without introducing innovative methodologies or insights.
