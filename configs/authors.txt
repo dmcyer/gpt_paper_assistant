@@ -1,223 +1,223 @@
 # https://github.com/j991222/ai4math-papers
-Daniel Whalen
-Sarah Loos
-Geoffrey Irving
-Christian Szegedy
-Cezary Kaliszyk
-Josef Urban
-Henryk Michalewski
-Miroslav Olšák
-Daniel Huang
-Prafulla Dhariwal
-Dawn Song
-Ilya Sutskever
-Kshitij Bansal
-Sarah Loos
-Markus Rabe
-Christian Szegedy
-Stewart Wilcox
-Kaiyu Yang
-Jia Deng
-Aditya Paliwal
-Sarah Loos
-Markus Rabe
-Kshitij Bansal
-Christian Szegedy
-Stewart Wilcox
-Daniel Huang
-Prafulla Dhariwal
-Dawn Song
-Ilya Sutskever
-Kshitij Bansal
-Sarah Loos
-Markus Rabe
-Kshitij Bansal
-Kaiyu Yang
-Jia Deng
-Aditya Paliwal
-Sarah Loos
-Markus Rabe
-Kshitij Bansal
-Christian Szegedy
-Sean Welleck
-Jiacheng Liu
-Ximing Lu
-Hannaneh Hajishirzi
-Yejin Choi
-Benjamin G. Brown
-Guy Gur-Ari
-Adam Zsolt Wagner
-Sergei Gukov
-James Halverson
-Ciprian Manolescu
-Fabian Ruehle
-Bernardino Romera-Paredes
-Mohammadamin Barekatain
-Alexander Novikov
-Matej Balog
-M. Pawan Kumar
-Emilien Dupont
-Francisco J. R. Ruiz
-Jordan S. Ellenberg
-Pengming Wang
-Omar Fawzi
-Pushmeet Kohli
-Alhussein Fawzi
-Per Berglund
-Ben Campbell
-Vishnu Jejjala
-David S. Berman
-Yang-Hui He
-Edward Hirst
-Bin Dong
-Xuhua He
-Pengfei Jin
-Felix Schremmer
-Qingchao Yu
-Baran Hashemi
-Roderic G. Corominas
-Alessandro Giacchetto
-Adam Zsolt Wagner
-Sergei Gukov
-James Halverson
-Ciprian Manolescu
-Fabian Ruehle
-Bernardino Romera-Paredes
-Mohammadamin Barekatain
-Alexander Novikov
-Matej Balog
-M. Pawan Kumar
-Emilien Dupont
-Francisco J. R. Ruiz
-Jordan S. Ellenberg
-Pengming Wang
-Omar Fawzi
-Pushmeet Kohli
-Alhussein Fawzi
-Chenyang An
-Zhibo Chen
-Qihao Ye
-Emily First
-Letian Peng
-Jiayun Zhang
-Zihan Wang
-Sorin Lerner
-Jingbo Shang
-Jin Peng Zhou
-Yuhuai Wu
-Qiyang Li
-Roger Grosse
-Haiming Wang
-Huajian Xin
-Zhengying Liu
-Wenda Li
-Yinya Huang
-Qingxing Cao
-Yiming He
-Yiye He
-Jia Zou
-Xiaokai Zhang
-Na Zhu
-Tuo Leng
-Cheng Qin
-Yang Li
-Zhenbing Zeng
-Xiaokai Zhang
-Na Zhu
-Yiming He
-Jia Zou
-Qike Huang
-Xiaoxiao Jin
-Yanjun Guo
-Chenyang Mao
-Zhe Zhu
-Dengfeng Yue
-Fangzhen Zhu
-Yang Li
-Yifan Wang
-Yiwen Huang
-Runan Wang
-Cheng Qin
-Zhenbing Zeng
-Shaorong Xie
-Xiangfeng Luo
-Tuo Leng
-Yiming He
-Jia Zou
-Xiaokai Zhang
-Na Zhu
-Yiming He
-Jia Zou
-Qike Huang
-Xiaoxiao Jin
-Yanjun Guo
-Chenyang Mao
-Zhe Zhu
-Dengfeng Yue
-Fangzhen Zhu
-Yang Li
-Yifan Wang
-Yiwen Huang
-Runan Wang
-Cheng Qin
-Zhenbing Zeng
-Shaorong Xie
-Xiangfeng Luo
-Tuo Leng
-Shiven Sinha
-Ameya Prabhu
-Ponnurangam Kumaraguru
-Siddharth Bhat
-Matthias Bethge
-Chenyang An
-Zhibo Chen
-Qihao Ye
-Emily First
-Letian Peng
-Jiayun Zhang
-Zihan Wang
-Sorin Lerner
-Jingbo Shang
-Haiming Wang
-Huajian Xin
-Zhengying Liu
-Wenda Li
-Yinya Huang
-Jianqiao Lu
-Zhicheng Yang
-Jing Tang
-Jian Yin
-Zhenguo Li
-Xiaodan Liang
-Huaiyuan Ying
-Zijian Wu
-Yihan Geng
-Jiayu Wang
-Dahua Lin
-Kai Chen
-Katherine M. Collins
-Albert Q. Jiang
-Simon Frieder
-Lionel Wong
-Miri Zilka
-Umang Bhatt
-Thomas Lukasiewicz
-Yuhuai Wu
-Joshua B. Tenenbaum
-William Hart
-Timothy Gowers
-Wenda Li
-Adrian Weller
-Mateja Jamnik
-Deborah Ferreira
-André Freitas
-Fabian Gloeckle
-Baptiste Roziere
-Amaury Hayat
-Gabriel Synnaeve
-Jason Rute
-Miroslav Olšák
-Lasse Blaauwbroek
-Fidel Ivan Schaposnik Massolo
-Jelle Piepenbrock
-Vasily Pestun
+# Daniel Whalen 114514
+# Sarah Loos
+# Geoffrey Irving
+# Christian Szegedy
+# Cezary Kaliszyk
+# Josef Urban
+# Henryk Michalewski
+# Miroslav Olšák
+# Daniel Huang
+# Prafulla Dhariwal
+# Dawn Song
+# Ilya Sutskever
+# Kshitij Bansal
+# Sarah Loos
+# Markus Rabe
+# Christian Szegedy
+# Stewart Wilcox
+# Kaiyu Yang
+# Jia Deng
+# Aditya Paliwal
+# Sarah Loos
+# Markus Rabe
+# Kshitij Bansal
+# Christian Szegedy
+# Stewart Wilcox
+# Daniel Huang
+# Prafulla Dhariwal
+# Dawn Song
+# Ilya Sutskever
+# Kshitij Bansal
+# Sarah Loos
+# Markus Rabe
+# Kshitij Bansal
+# Kaiyu Yang
+# Jia Deng
+# Aditya Paliwal
+# Sarah Loos
+# Markus Rabe
+# Kshitij Bansal
+# Christian Szegedy
+# Sean Welleck
+# Jiacheng Liu
+# Ximing Lu
+# Hannaneh Hajishirzi
+# Yejin Choi
+# Benjamin G. Brown
+# Guy Gur-Ari
+# Adam Zsolt Wagner
+# Sergei Gukov
+# James Halverson
+# Ciprian Manolescu
+# Fabian Ruehle
+# Bernardino Romera-Paredes
+# Mohammadamin Barekatain
+# Alexander Novikov
+# Matej Balog
+# M. Pawan Kumar
+# Emilien Dupont
+# Francisco J. R. Ruiz
+# Jordan S. Ellenberg
+# Pengming Wang
+# Omar Fawzi
+# Pushmeet Kohli
+# Alhussein Fawzi
+# Per Berglund
+# Ben Campbell
+# Vishnu Jejjala
+# David S. Berman
+# Yang-Hui He
+# Edward Hirst
+# Bin Dong
+# Xuhua He
+# Pengfei Jin
+# Felix Schremmer
+# Qingchao Yu
+# Baran Hashemi
+# Roderic G. Corominas
+# Alessandro Giacchetto
+# Adam Zsolt Wagner
+# Sergei Gukov
+# James Halverson
+# Ciprian Manolescu
+# Fabian Ruehle
+# Bernardino Romera-Paredes
+# Mohammadamin Barekatain
+# Alexander Novikov
+# Matej Balog
+# M. Pawan Kumar
+# Emilien Dupont
+# Francisco J. R. Ruiz
+# Jordan S. Ellenberg
+# Pengming Wang
+# Omar Fawzi
+# Pushmeet Kohli
+# Alhussein Fawzi
+# Chenyang An
+# Zhibo Chen
+# Qihao Ye
+# Emily First
+# Letian Peng
+# Jiayun Zhang
+# Zihan Wang
+# Sorin Lerner
+# Jingbo Shang
+# Jin Peng Zhou
+# Yuhuai Wu
+# Qiyang Li
+# Roger Grosse
+# Haiming Wang
+# Huajian Xin
+# Zhengying Liu
+# Wenda Li
+# Yinya Huang
+# Qingxing Cao
+# Yiming He
+# Yiye He
+# Jia Zou
+# Xiaokai Zhang
+# Na Zhu
+# Tuo Leng
+# Cheng Qin
+# Yang Li
+# Zhenbing Zeng
+# Xiaokai Zhang
+# Na Zhu
+# Yiming He
+# Jia Zou
+# Qike Huang
+# Xiaoxiao Jin
+# Yanjun Guo
+# Chenyang Mao
+# Zhe Zhu
+# Dengfeng Yue
+# Fangzhen Zhu
+# Yang Li
+# Yifan Wang
+# Yiwen Huang
+# Runan Wang
+# Cheng Qin
+# Zhenbing Zeng
+# Shaorong Xie
+# Xiangfeng Luo
+# Tuo Leng
+# Yiming He
+# Jia Zou
+# Xiaokai Zhang
+# Na Zhu
+# Yiming He
+# Jia Zou
+# Qike Huang
+# Xiaoxiao Jin
+# Yanjun Guo
+# Chenyang Mao
+# Zhe Zhu
+# Dengfeng Yue
+# Fangzhen Zhu
+# Yang Li
+# Yifan Wang
+# Yiwen Huang
+# Runan Wang
+# Cheng Qin
+# Zhenbing Zeng
+# Shaorong Xie
+# Xiangfeng Luo
+# Tuo Leng
+# Shiven Sinha
+# Ameya Prabhu
+# Ponnurangam Kumaraguru
+# Siddharth Bhat
+# Matthias Bethge
+# Chenyang An
+# Zhibo Chen
+# Qihao Ye
+# Emily First
+# Letian Peng
+# Jiayun Zhang
+# Zihan Wang
+# Sorin Lerner
+# Jingbo Shang
+# Haiming Wang
+# Huajian Xin
+# Zhengying Liu
+# Wenda Li
+# Yinya Huang
+# Jianqiao Lu
+# Zhicheng Yang
+# Jing Tang
+# Jian Yin
+# Zhenguo Li
+# Xiaodan Liang
+# Huaiyuan Ying
+# Zijian Wu
+# Yihan Geng
+# Jiayu Wang
+# Dahua Lin
+# Kai Chen
+# Katherine M. Collins
+# Albert Q. Jiang
+# Simon Frieder
+# Lionel Wong
+# Miri Zilka
+# Umang Bhatt
+# Thomas Lukasiewicz
+# Yuhuai Wu
+# Joshua B. Tenenbaum
+# William Hart
+# Timothy Gowers
+# Wenda Li
+# Adrian Weller
+# Mateja Jamnik
+# Deborah Ferreira
+# André Freitas
+# Fabian Gloeckle
+# Baptiste Roziere
+# Amaury Hayat
+# Gabriel Synnaeve
+# Jason Rute
+# Miroslav Olšák
+# Lasse Blaauwbroek
+# Fidel Ivan Schaposnik Massolo
+# Jelle Piepenbrock
+# Vasily Pestun
