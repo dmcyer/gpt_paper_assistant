@@ -1,4 +1,4 @@
-name: Run daily arxiv
+name: Run daily arxiv -1
 
 on:
   schedule:
