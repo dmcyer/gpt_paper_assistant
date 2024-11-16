@@ -12,7 +12,7 @@ from retry import retry
 from tqdm import tqdm
 
 from arxiv_scraper import get_papers_from_arxiv_rss_api
-from filter_papers import filter_by_gpt
+from filter_papers import filter_by_author, filter_by_gpt
 from parse_json_to_md import render_md_string
 from push_to_slack import push_to_slack
 from arxiv_scraper import EnhancedJSONEncoder
@@ -165,30 +165,71 @@ def get_papers_from_arxiv(config):
     return paper_set
 
 
+def parse_authors(lines):
+    # parse the comma-separated author list, ignoring lines that are empty and starting with #
+    author_ids = []
+    authors = []
+    for line in lines:
+        if line.startswith("#"):
+            continue
+        if not line.strip():
+            continue
+        author_split = line.split(",")
+        author_ids.append(author_split[1].strip())
+        authors.append(author_split[0].strip())
+    return authors, author_ids
+
+
 if __name__ == "__main__":
+    # now load config.ini
     config = configparser.ConfigParser()
     config.read("configs/config.ini")
 
-    # 获取API密钥
+    S2_API_KEY = os.environ.get("S2_KEY")
     OAI_KEY = os.environ.get("OAI_KEY")
     if OAI_KEY is None:
-        raise ValueError("OpenAI key is not set - please set OAI_KEY to your OpenAI key")
+        raise ValueError(
+            "OpenAI key is not set - please set OAI_KEY to your OpenAI key"
+        )
     openai_client = OpenAI(
         base_url="https://api.gptapi.us/v1",
         api_key=OAI_KEY,
     )
 
-    # 直接获取论文,不需要作者列表
-    papers = list(get_papers_from_arxiv(config))
-    
-    # 初始化排序和论文字典
-    sort_dict = {}
-    selected_papers = {}
-    all_papers = {paper.id: paper for paper in papers}
+    # load the author list
+    with io.open("configs/authors.txt", "r") as fopen:
+        author_names, author_ids = parse_authors(fopen.readlines())
+    author_id_set = set(author_ids)
 
-    # 直接使用GPT筛选
+    papers = list(get_papers_from_arxiv(config))
+    # dump all papers for debugging
+
+    all_authors = set()
+    for paper in papers:
+        all_authors.update(set(paper.authors))
+    if config["OUTPUT"].getboolean("debug_messages"):
+        print("Getting author info for " + str(len(all_authors)) + " authors")
+    all_authors = get_authors(list(all_authors), S2_API_KEY)
+
+    if config["OUTPUT"].getboolean("dump_debug_file"):
+        with open(
+            config["OUTPUT"]["output_path"] + "papers.debug.json", "w"
+        ) as outfile:
+            json.dump(papers, outfile, cls=EnhancedJSONEncoder, indent=4)
+        with open(
+            config["OUTPUT"]["output_path"] + "all_authors.debug.json", "w"
+        ) as outfile:
+            json.dump(all_authors, outfile, cls=EnhancedJSONEncoder, indent=4)
+        with open(
+            config["OUTPUT"]["output_path"] + "author_id_set.debug.json", "w"
+        ) as outfile:
+            json.dump(list(author_id_set), outfile, cls=EnhancedJSONEncoder, indent=4)
+
+    selected_papers, all_papers, sort_dict = filter_by_author(
+        all_authors, papers, author_id_set, config
+    )
     filter_by_gpt(
-        None,  # 不需要作者信息
+        all_authors,
         papers,
         config,
         openai_client,
