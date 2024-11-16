@@ -1,5 +1,5 @@
 # https://github.com/j991222/ai4math-papers
-# Daniel Whalen 114514
+Daniel Whalen 114514
 # Sarah Loos
 # Geoffrey Irving
 # Christian Szegedy
