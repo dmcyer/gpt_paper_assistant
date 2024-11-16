@@ -1,4 +1,4 @@
-name: Publish output MD to github pages
+name: Publish output MD to github pages -1
 
 on:
   workflow_dispatch:
