@@ -169,6 +169,8 @@ def parse_authors(lines):
     # parse the comma-separated author list, ignoring lines that are empty and starting with #
     author_ids = []
     authors = []
+    return authors, author_ids 
+    # debug1 
     for line in lines:
         if line.startswith("#"):
             continue
