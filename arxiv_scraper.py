@@ -40,7 +40,7 @@ def get_papers_from_arxiv_api(area: str, timestamp, last_id) -> List[Paper]:
     # look for papers that are newer than the newest papers in RSS.
     # we do this by looking at last_id and grabbing everything newer.
     end_date = timestamp
-    start_date = timestamp - timedelta(days=4)
+    start_date = timestamp - timedelta(days=40)
     search = arxiv.Search(
         query="("
         + area
@@ -72,7 +72,7 @@ def get_papers_from_arxiv_api(area: str, timestamp, last_id) -> List[Paper]:
 
 def get_papers_from_arxiv_rss(area: str, config: Optional[dict]) -> List[Paper]:
     # get the feed from http://export.arxiv.org/rss/ and use the updated timestamp to avoid duplicates
-    updated = datetime.utcnow() - timedelta(days=1)
+    updated = datetime.utcnow() - timedelta(days=100)
     # format this into the string format 'Fri, 03 Nov 2023 00:30:00 GMT'
     updated_string = updated.strftime("%a, %d %b %Y %H:%M:%S GMT")
     feed = feedparser.parse(
