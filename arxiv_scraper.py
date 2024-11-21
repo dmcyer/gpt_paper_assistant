@@ -40,7 +40,7 @@ def get_papers_from_arxiv_api(area: str, timestamp, last_id) -> List[Paper]:
     # look for papers that are newer than the newest papers in RSS.
     # we do this by looking at last_id and grabbing everything newer.
     end_date = timestamp
-    start_date = timestamp - timedelta(days=40)
+    start_date = timestamp - timedelta(days=4)
     search = arxiv.Search(
         query="("
         + area
@@ -72,19 +72,36 @@ def get_papers_from_arxiv_api(area: str, timestamp, last_id) -> List[Paper]:
 
 def get_papers_from_arxiv_rss(area: str, config: Optional[dict]) -> List[Paper]:
     # get the feed from http://export.arxiv.org/rss/ and use the updated timestamp to avoid duplicates
-    updated = datetime.utcnow() - timedelta(days=100)
+    updated = datetime.utcnow() - timedelta(days=3)
     # format this into the string format 'Fri, 03 Nov 2023 00:30:00 GMT'
     updated_string = updated.strftime("%a, %d %b %Y %H:%M:%S GMT")
     feed = feedparser.parse(
-        f"http://export.arxiv.org/rss/{area}", modified=updated_string
+        f"https://export.arxiv.org/rss/{area}", modified=updated_string
     )
-    if feed.status == 304:
-        if (config is not None) and config["OUTPUT"]["debug_messages"]:
-            print("No new papers since " + updated_string + " for " + area)
-        # if there are no new papers return an empty list
-        return [], None, None
+    
+    # 添加状态码检查
+    if hasattr(feed, 'status'):
+        if feed.status == 304:
+            if (config is not None) and config["OUTPUT"]["debug_messages"]:
+                print(f"No new papers since {updated_string} for {area}")
+            return [], None, None
+        elif feed.status in [301, 302]:
+            if (config is not None) and config["OUTPUT"]["debug_messages"]:
+                print(f"RSS feed redirected for {area}")
+            # 可以选择使用 feed.href 重试
+            # print(feed.href)
+            feed = feedparser.parse(feed.href, modified=updated_string)
+    # print("---")
+    
+    # debug 4
+    # print(feed)
+    # 1731789246 
     # get the list of entries
+# RSS feed redirected for cs
+# ---
+# 585
     entries = feed.entries
+    
     if len(feed.entries) == 0:
         print("No entries found for " + area)
         return [], None, None
@@ -117,7 +134,9 @@ def get_papers_from_arxiv_rss(area: str, config: Optional[dict]) -> List[Paper]:
         # make a new paper
         new_paper = Paper(authors=authors, title=title, abstract=summary, arxiv_id=id)
         paper_list.append(new_paper)
-
+    print(f"找到 {len(paper_list)} 篇论文")
+    print(len(feed.entries))
+    
     return paper_list, timestamp, last_id
 
 

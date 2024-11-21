@@ -169,6 +169,8 @@ def parse_authors(lines):
     # parse the comma-separated author list, ignoring lines that are empty and starting with #
     author_ids = []
     authors = []
+    return author_ids, authors
+#debug 1
     for line in lines:
         if line.startswith("#"):
             continue
@@ -187,14 +189,16 @@ if __name__ == "__main__":
 
     S2_API_KEY = os.environ.get("S2_KEY")
     OAI_KEY = os.environ.get("OAI_KEY")
+    OAI_KEY = 'sk-4oPh6qgDvQYweUJXFf30444039Ad41028175B376F8EeFbD4'
+
     if OAI_KEY is None:
         raise ValueError(
             "OpenAI key is not set - please set OAI_KEY to your OpenAI key"
         )
     openai_client = OpenAI(
         base_url="https://api.gptapi.us/v1",
-        api_key=OAI_KEY,
-    )
+        
+        api_key=OAI_KEY)
 
     # load the author list
     with io.open("configs/authors.txt", "r") as fopen:
@@ -202,6 +206,8 @@ if __name__ == "__main__":
     author_id_set = set(author_ids)
 
     papers = list(get_papers_from_arxiv(config))
+    # debug 2
+    # print(papers)
     # dump all papers for debugging
 
     all_authors = set()
@@ -210,6 +216,9 @@ if __name__ == "__main__":
     if config["OUTPUT"].getboolean("debug_messages"):
         print("Getting author info for " + str(len(all_authors)) + " authors")
     all_authors = get_authors(list(all_authors), S2_API_KEY)
+
+    # debug 3
+    print(all_authors)
 
     if config["OUTPUT"].getboolean("dump_debug_file"):
         with open(
@@ -228,6 +237,9 @@ if __name__ == "__main__":
     selected_papers, all_papers, sort_dict = filter_by_author(
         all_authors, papers, author_id_set, config
     )
+    print("论文总数: " + str(len(papers)))
+    print("选中论文数: " + str(len(selected_papers)))
+
     filter_by_gpt(
         all_authors,
         papers,
@@ -245,7 +257,8 @@ if __name__ == "__main__":
     selected_papers = {key: selected_papers[key] for key in sorted_keys}
     if config["OUTPUT"].getboolean("debug_messages"):
         print(sort_dict)
-        print(selected_papers)
+        print("最终选中论文数: " + str(len(selected_papers)))
+        # print(selected_papers)
 
     # pick endpoints and push the summaries
     if len(papers) > 0:
