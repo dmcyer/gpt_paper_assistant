@@ -189,7 +189,6 @@ if __name__ == "__main__":
 
     S2_API_KEY = os.environ.get("S2_KEY")
     OAI_KEY = os.environ.get("OAI_KEY")
-    OAI_KEY = 'sk-4oPh6qgDvQYweUJXFf30444039Ad41028175B376F8EeFbD4'
 
     if OAI_KEY is None:
         raise ValueError(
