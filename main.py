@@ -196,7 +196,7 @@ if __name__ == "__main__":
             "OpenAI key is not set - please set OAI_KEY to your OpenAI key"
         )
     openai_client = OpenAI(
-        base_url="https://api.gptapi.us/v1",
+        base_url="https://api.gptapi.us/v1/chat/completions",
         
         api_key=OAI_KEY)
 
