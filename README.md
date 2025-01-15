@@ -1,3 +1,44 @@
+解说词
+
+2
+
+Clock Tower
+The architectural style of the tower has a historical feel,
+
+Spire
+style appears magnificent
+
+(Red Roof)
+since i come from asia, i find it very eye-catching just like what i think the fairy tale town is.
+
+![alt text](image.png)
+
+我们的目标是提供不同标签的典型元素的可视化总结，例如使我们能够确定街
+景全景位置的共同元素。
+
+应用1
+(c) Translation (Sec. 5.1) of a picture of a road
+from France (top) to Thailand without finetuning (middle) suffers from data biases in
+the base model turning the road into a river and erasing utility poles. 
+
+CLIP feature obtained through contrastive learning
+
+We translate 1000 images for
+each of the 10 selected countries to all others, resulting in 100K images,
+
+japan 1000 generate 10000 pic
+all 10 generate 100000 pic
+
+
+technical issues in making photos.
+
+17
+they all contains roofs.
+means roofs pic are all typical 
+
+but like in japan roofs are most in black color.
+show the trend in roof pics.
+
 # GPT4 paper assistant: A daily ArXiv scanner
 
 This repo implements a very simple daily scanner for Arxiv that uses GPT4 and author matches to find papers you might find interesting. 
