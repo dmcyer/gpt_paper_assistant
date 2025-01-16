@@ -2,17 +2,17 @@
 
 Hello everyone,
 
-Thank you for joining me today. I’m excited to present insights from the paper, **"Diffusion Models as Data Mining Tools,"** published at ECCV 2024. Let’s explore its key concepts and applications together.
-
+Thank you for joining me today. I’m excited to present  the paper, **"Diffusion Models as Data Mining Tools,"** published at ECCV 2024 spot. 
+Let’s explore together.
 ---
 
-#### Introduction
+To start, let me pose a question: What makes Prague look like Prague?
+ When we think about the essence of a city, 
+** certain elements stand out.** For Prague, these could be:
 
-What makes Prague unmistakably Prague? When we think about the essence of a city, certain elements stand out. For Prague, these could be:
-
-1. **The Clock Tower** – A symbol of the city’s rich historical tapestry.
+1. **The Clock Tower** – A symbol of the city’s **rich historical tapestry.**
 2. **The Spires** – Towering and sacred, embodying European heritage.
-3. **The Red Roofs** – Evoking fairy-tale charm, especially for those unfamiliar with such architecture.
+3. **The Red Roofs** – since i come from asia, i find it very eye-catching just like what i think the fairy tale town is.
 
 While humans intuitively identify these features, achieving this computationally is challenging. This paper addresses the challenge using **diffusion models** as tools for visual data mining.
 
