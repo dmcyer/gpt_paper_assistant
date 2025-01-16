@@ -1,3 +1,78 @@
+### Refined Speech for Presentation
+
+Hello everyone,
+
+Thank you for joining me today. I’m excited to present insights from the paper, **"Diffusion Models as Data Mining Tools,"** published at ECCV 2024. Let’s explore its key concepts and applications together.
+
+---
+
+#### Introduction
+
+What makes Prague unmistakably Prague? When we think about the essence of a city, certain elements stand out. For Prague, these could be:
+
+1. **The Clock Tower** – A symbol of the city’s rich historical tapestry.
+2. **The Spires** – Towering and sacred, embodying European heritage.
+3. **The Red Roofs** – Evoking fairy-tale charm, especially for those unfamiliar with such architecture.
+
+While humans intuitively identify these features, achieving this computationally is challenging. This paper addresses the challenge using **diffusion models** as tools for visual data mining.
+
+---
+
+#### Diffusion Models Overview
+
+Diffusion models work through two main processes:
+
+1. **Forward Process**: Incrementally adds noise to data.
+2. **Backward Process**: Removes noise to reconstruct the data with a trained model.
+
+This iterative approach helps extract meaningful patterns. The model discussed here, **Stable Diffusion**, introduces two key innovations:
+
+1. **Conditional Diffusion**: Guides generation using prompts, such as text labels.
+2. **Latent Diffusion**: Operates in a compressed latent space, improving efficiency.
+
+---
+
+#### Typicality in Visual Data Mining
+
+The concept of "typicality" is central. A visual element is considered typical if the model denoises data more effectively with a label. For instance:
+
+- Without the label “Prague,” the model struggles.
+- With the label, the loss decreases, indicating the element’s relevance.
+
+By calculating typicality scores, we can pinpoint the most characteristic features in a dataset.
+
+---
+
+#### Applications
+
+##### 1. **Cultural Trends in Imagery**
+   - Analyzing images from 10 countries reveals unique patterns. For example:
+     - Roofs in Japan are predominantly black.
+     - Thailand’s roofs showcase greater color diversity.
+
+   These insights highlight both universal and localized visual trends.
+
+##### 2. **Medical Image Analysis**
+   - Fine-tuned diffusion models identify regions of interest in medical images, aligning predictions with expert annotations. This demonstrates potential for aiding diagnoses.
+
+---
+
+#### Limitations
+
+1. **Clustering Challenges**: Unrelated elements, like eyes and mouths, may cluster together.
+2. **Noise Artifacts**: Noise introduced during feature extraction can reduce accuracy.
+3. **Limited Generalization**: Fine-tuned models may overfit specific datasets.
+
+---
+
+#### Conclusion
+
+In conclusion, **diffusion models** are powerful tools for visual data mining, uncovering patterns in cultural and medical contexts. They bridge generative AI with practical applications, offering a glimpse into future innovations.
+
+Thank you for your attention. I look forward to your feedback and any questions you might have!
+
+
+
 解说词
 
 2
