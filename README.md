@@ -42,18 +42,18 @@ The concept of "typicality" is central. A visual element is considered typical i
 By calculating typicality scores, we can pinpoint the most characteristic features in a dataset.
 
 ---
+Details of Mining
+Conditioning and Fine - Tuning: In the first street - view data, the new conditioning changes from an empty stream to a Google street - view image. For fine - tuning, we train each model on the target dataset by optimizing the loss.
+Clustering: We collect patches with high typicality, say 1000 out of 10,000 pictures. Then we embed these patches in DFT features, considering the time parameter. After getting the features, we run k - means on them. The DFT (Diffusion Features) for an image  involves adding noise at time step , feeding it to the diffusion model, and extracting intermediate - layer activations.
+Datasets and Results
+The paper uses four datasets: cars, faces, geometry, and places. The first two are small, and the latter two are large and newly used in this paper. The results show that for a label like "soccer field," we can distinguish typical and non - typical pictures. Fine - tuning also helps in highlighting more typical elements
 
 #### Applications
 
-##### 1. **Cultural Trends in Imagery**
-   - Analyzing images from 10 countries reveals unique patterns. For example:
-     - Roofs in Japan are predominantly black.
-     - Thailand’s roofs showcase greater color diversity.
 
-   These insights highlight both universal and localized visual trends.
+**Styles of Different Countries**: Instead of fixing the label \(C\), we change it, for example, from a Japanese photo to a UK photo (\(C_1\)). We generate a new picture \(XC_1\) and calculate the typicality. By selecting 10 countries in the dataset, we can find trends. For instance, roof pictures often have high typicality, and roof colors can vary between countries.
 
-##### 2. **Medical Image Analysis**
-   - Fine-tuned diffusion models identify regions of interest in medical images, aligning predictions with expert annotations. This demonstrates potential for aiding diagnoses.
+**Medical Images**: The paper uses a dataset of 8000 medical images with 7 disease classes, marked with red rectangles indicating regions of interest. Our fine - tuned model shows good results in finding the ROI for tuberculosis. The pre - trained model doesn't perform as well as the fine - tuned one.
 
 ---
 
