@@ -1,5 +1,16 @@
+## expl for why use difffusion model
+（利用大模型所学到的知识）
+扩散模型的权重中隐式地存储输入数据的视觉特征。我们想利用这里的信息帮助数据挖掘。
+
+(Utilizing the knowledge learned by the large model)
+The visual features of the input data are implicitly stored in the weights of the diffusion model. We want to utilize this information to assist in data mining.
+
 
 ## related work explain
+需为每个视觉元素训练单独的线性 SVM 检测器。
+要对数据集中每幅图像的所有视觉元素与整个数据集进行两两比较来定位最近邻和构建聚类，其计算复杂度会随数据集规模呈二次方增长。 
+计算成本过高 
+具有更好的扩展性。
 
 A separate linear SVM detector needs to be trained for each visual element.
 
