@@ -1,3 +1,14 @@
+
+## related work explain
+
+A separate linear SVM detector needs to be trained for each visual element.
+
+To locate the nearest neighbors and construct clusters, pairwise comparisons must be made between all the visual elements of each image in the dataset and the entire dataset. The computational complexity grows quadratically with the size of the dataset.
+
+The computational cost is prohibitively high.
+
+It has better scalability. 
+
 ### Refined Speech for Presentation
 
 Hello everyone,
