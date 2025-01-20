@@ -1,11 +1,3 @@
-## expl for why use difffusion model
-（利用大模型所学到的知识）
-扩散模型的权重中隐式地存储输入数据的视觉特征。我们想利用这里的信息帮助数据挖掘。
-
-(Utilizing the knowledge learned by the large model)
-The visual features of the input data are implicitly stored in the weights of the diffusion model. We want to utilize this information to assist in data mining.
-
-if you yolo you can not recognize these separate thing like spire red roof.
 
 ## related work explain
 需为每个视觉元素训练单独的线性 SVM 检测器。
@@ -21,7 +13,33 @@ The computational cost is prohibitively high.
 
 It has better scalability. 
 
-### Refined Speech for Presentation
+## expl for why use difffusion model
+（利用大模型所学到的知识）
+扩散模型的权重中隐式地存储输入数据的视觉特征。我们想利用这里的信息帮助数据挖掘。
+
+(Utilizing the knowledge learned by the large model)
+The visual features of the input data are implicitly stored in the weights of the diffusion model. We want to utilize this information to assist in data mining.
+
+if you yolo you can not recognize these separate thing like spire red roof.
+
+## CONTENT
+
+ By fine-tuning conditional diffusion models on specific datasets and defining a typicality measure, it can effectively mine visual patterns in datasets with different tags such as time, geography, and semantic labels.
+The method overcomes the scalability issues faced by traditional visual data mining techniques. Unlike traditional methods that require pairwise comparisons of all visual elements in the dataset, this approach does not rely on such comparisons and can handle large and diverse datasets, including historical car datasets, face datasets, street-view datasets, and scene datasets.
+The paper also explores two applications. One is to analyze the trends of visual elements across different locations by translating geographical elements and mining typical translations. The other is to apply the typicality measure to medical images and improve the localization of abnormal areas in X-ray images of patients with various thorax diseases.
+
+quadratic computational complexity
+can not deploy on big dataset.
+
+Scalability: Traditional SVM-based visual data mining methods require pairwise comparisons of all visual elements in the dataset to locate nearest neighbors and establish clusters. This leads to a quadratic increase in computational complexity with the growth of the dataset size. In contrast, the method proposed in this paper does not rely on such pairwise comparisons. It uses a diffusion model-based analysis-by-synthesis approach, which can scale well to very large datasets. For example, it can handle datasets like G^3 with 344K images and Places with 1.8M images, while SVM methods would struggle with such large-scale data.
+
+svm can only identify the most typical image region
+ iconic elements like aviator glasses in the 1920s and military hats in the 1940s,
+svm can not identify so exactly
+Ability to Mine Typical Elements: SVM-based works mainly focus on discriminative tasks rather than actually mining typical visual elements in the dataset. This paper, however, is designed specifically to identify the most typical image regions. By defining a typicality measure based on the performance of the diffusion model in denoising images under different label conditions, it can effectively extract characteristic visual patterns. For instance, in the face dataset, it can discover iconic elements like aviator glasses in the 1920s and military hats in the 1940s, which SVM methods are not capable of.
+
+
+# Refined Speech for Presentation
 
 Hello everyone,
 
