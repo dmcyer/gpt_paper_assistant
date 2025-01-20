@@ -5,6 +5,7 @@
 (Utilizing the knowledge learned by the large model)
 The visual features of the input data are implicitly stored in the weights of the diffusion model. We want to utilize this information to assist in data mining.
 
+if you yolo you can not recognize these separate thing like spire red roof.
 
 ## related work explain
 需为每个视觉元素训练单独的线性 SVM 检测器。
