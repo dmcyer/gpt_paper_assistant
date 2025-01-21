@@ -13,6 +13,11 @@ The computational cost is prohibitively high.
 
 It has better scalability. 
 
+### 还有yolo
+yolo不能发现数据的模式 trend 
+重点在于挖掘数据集中的典型视觉元素，并分析其与标签（如时间、地理位置、语义标签等）的关系，需要对图像的整体特征和细微模式进行深入理解和总结。
+The focus is on mining typical visual elements in the data set and analyzing their relationship with labels (such as time, geographic location, semantic labels, etc.), which requires an in-depth understanding and summary of the overall features and subtle patterns of the image.
+
 ## expl for why use difffusion model
 （利用大模型所学到的知识）
 扩散模型的权重中隐式地存储输入数据的视觉特征。我们想利用这里的信息帮助数据挖掘。
