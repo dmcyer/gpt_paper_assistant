@@ -189,14 +189,14 @@ if __name__ == "__main__":
 
     S2_API_KEY = os.environ.get("S2_KEY")
     OAI_KEY = os.environ.get("OAI_KEY")
+    DeepSeek_KEY = "sk-a2420932b12243c38719765c89d3e0c0"
 
     if OAI_KEY is None:
         raise ValueError(
             "OpenAI key is not set - please set OAI_KEY to your OpenAI key"
         )
-    openai_client = OpenAI( base_url="https://api.gptapi.us/v1/chat/completions",
-        
-        api_key=OAI_KEY)
+    openai_client = OpenAI(base_url="https://api.deepseek.com/v1",
+        api_key=DeepSeek_KEY)
 
     # load the author list
     with io.open("configs/authors.txt", "r") as fopen:
